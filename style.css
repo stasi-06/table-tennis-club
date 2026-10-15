@@ -459,6 +459,42 @@
     color: var(--ink-soft);
   }
 
+  /* ---------- Расписание ---------- */
+  .schedule-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: var(--shadow);
+  }
+
+  .schedule-scroll:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .schedule-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .schedule-table th, .schedule-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .schedule-table thead {
+    background: var(--ink);
+    color: #fff;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .schedule-table tbody th { color: var(--ink); font-weight: 600; }
+  .schedule-table tbody tr:nth-child(even) { background: var(--bg); }
+  .schedule-table tbody tr:last-child > * { border-bottom: 0; }
+
   /* ---------- Цены ---------- */
   .price {
     position: relative;
