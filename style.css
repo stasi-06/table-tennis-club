@@ -506,6 +506,51 @@
 
   .price-note { margin-top: 28px; font-size: 14px; color: var(--muted); }
 
+  /* ---------- Частые вопросы ---------- */
+  .faq-list { display: grid; gap: 16px; }
+
+  .faq-item {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: var(--shadow);
+  }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 24px;
+    color: var(--ink);
+    font-size: 18px;
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg);
+    transition: transform .25s ease;
+  }
+
+  .faq-item[open] summary::after { transform: rotate(225deg); }
+  .faq-item summary:hover { color: var(--accent-dark); }
+  .faq-item summary:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+  }
+  .faq-item p { padding: 0 24px 24px; color: var(--muted); }
+
   /* ---------- Контакты ---------- */
   .contacts { background: linear-gradient(135deg, var(--ink) 0%, #10305c 100%); color: #fff; }
   .contacts .section-title { color: #fff; }
